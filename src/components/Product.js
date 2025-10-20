@@ -10,7 +10,7 @@ const products = [
 
 function Products() {
   return (
-    <Container className="py-5" id="products"><motion.section
+    <Container className="scroll-offset py-5" id="products"><motion.section
     id="home"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}

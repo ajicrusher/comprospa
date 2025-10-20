@@ -1,9 +1,15 @@
 /* ==== Global Styles ==== */
+html,
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   }
+
+.scroll-offset{
+    scroll-margin-top: 70px; /* sesuaikan dengan tinggi navbar */
+}
 
   .card{
     border-radius: 15px;
@@ -182,14 +188,14 @@ body {
 }
 
 .timeline h5,
-.visi-misi h5 {
+.visi h5, .misi h5 {
   color: #007bff;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .timeline ul,
-.visi-misi ul {
+.visi h5 ul, .misi h5 ul {
   list-style: none;
   padding: 0;
   margin-bottom: 1.5rem;
@@ -206,14 +212,13 @@ body {
   margin-right: 8px;
 }
 
-.visi-misi ul li {
+.visi ul li, .misi ul li {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.visi-misi ul li::before {
-  content: "•";
+.visi ul, .misi ul li::before {
   color: #007bff;
   position: absolute;
   left: 0;
@@ -256,3 +261,20 @@ body {
   color: #007bff;
   transform: translateY(-5px);
 } 
+#contact {
+  background: linear-gradient(180deg, #fff 0%, #fff 100%);
+}
+
+#contact h2 {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+iframe {
+  filter: grayscale(20%) brightness(95%);
+  transition: all 0.3s ease;
+}
+
+iframe:hover {
+  filter: grayscale(0%) brightness(100%);
+}
