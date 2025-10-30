@@ -47,7 +47,7 @@ function Footer() {
             <h5 className="fw-bold">Ikuti Kami</h5>
             <div className="d-flex gap-3 social-icons justify-content-center">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/pt-sarana-packaging-agrapana"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -61,7 +61,7 @@ function Footer() {
                 <FaWhatsapp />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/saranaagrapana/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

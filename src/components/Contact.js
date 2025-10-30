@@ -1,8 +1,32 @@
-import React from "react";
+import React, {useRef} from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_x48g2sg", // 👉 Ganti dengan Service ID kamu
+        "template_zmexfcg", // 👉 Ganti dengan Template ID kamu
+        form.current,
+        "6_Xrxbt3CNCEFrtqS" // 👉 Ganti dengan Public Key kamu
+      )
+      .then(
+        () => {
+          alert("✅ Pesan berhasil dikirim!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("❌ Gagal mengirim pesan. Coba lagi nanti.");
+          console.error(error);
+        }
+      );
+  };
+
   return (
     <motion.section
       id="contact"
@@ -21,20 +45,20 @@ function Contact() {
             <Card className="shadow-lg border-0 rounded-4">
               <Card.Body>
                 <h5 className="mb-4 text-secondary fw-semibold">Send us a message</h5>
-                <Form>
+                <Form ref={form} onSubmit={sendEmail}>
                   <Form.Group controlId="formName" className="mb-3">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter your name" />
+                    <Form.Control type="text" name="user_name" placeholder="Enter your name" />
                   </Form.Group>
 
                   <Form.Group controlId="formEmail" className="mb-3">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter your email" />
+                    <Form.Control type="email" name="user_email" placeholder="Enter your email" />
                   </Form.Group>
 
                   <Form.Group controlId="formMessage" className="mb-3">
                     <Form.Label>Message</Form.Label>
-                    <Form.Control as="textarea" rows={4} placeholder="Your message" />
+                    <Form.Control as="textarea" name="message"  rows={4} placeholder="Your message" />
                   </Form.Group>
 
                   <div className="d-grid">

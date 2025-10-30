@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Accordion, AccordionHeader, AccordionBody } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 function About() {
   return (
@@ -14,7 +15,14 @@ function About() {
           </Col>
 
           {/* Kanan: Isi teks */}
+
           <Col md={6} className="text-side">
+          < motion.section
+          id="about"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }} >
             <div className="about-content">
               <h2 className="about-title">Tentang Kami</h2>
               <p className="about-desc">
@@ -43,8 +51,7 @@ function About() {
                <AccordionHeader><h5>Visi</h5></AccordionHeader> 
                 <AccordionBody>
                 <p>
-                  Menjadi perusahaan kemasan terdepan di Indonesia dengan
-                  inovasi berkelanjutan dan layanan unggul.
+                  Menjadikan perusahaan sebagai salah satu perusahaan karton gelombang yang terkemuka dan terus berkembang di berbagai wilayah indonesia.
                 </p>
                 </AccordionBody>
                 </div>
@@ -55,16 +62,19 @@ function About() {
                 <AccordionHeader><h5>Misi</h5></AccordionHeader>
                 <AccordionBody>
                 <ul>
-                  <li>Menyediakan produk kemasan berkualitas tinggi dan ramah lingkungan.</li>
-                  <li>Membangun hubungan jangka panjang dengan pelanggan berbasis kepercayaan.</li>
-                  <li>Meningkatkan efisiensi produksi melalui teknologi modern.</li>
+                  <li>Menyediakan produk yang berkualitas baik sesuai spesifikasi pelanggan dengan tepat waktu.</li>
+                  <li>Terus meningkatkan aspek usaha dan kemampuan sumber daya manusia yang dimiliki melalui kreatifitas dan inovasi guna memastikan pertumbuhan usaha yang berkelanjutan.</li>
+                  <li>Menjalankan usaha secara adil dengan memperhatikan manfaat bagi semua yang berkepentingan melalui tata kelola perusahaan yang baik.</li>
+                  <li>Memberikan perhatian kepada karyawan perusahaan dan masyarakat sekitar</li>
                 </ul>
                 </AccordionBody>
               </div>
               </Accordion.Item>
               </Accordion>
             </div>
-          </Col>
+            </motion.section>
+          </Col>  
+          
         </Row>
       </Container>
     </section>
