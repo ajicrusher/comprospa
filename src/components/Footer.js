@@ -19,7 +19,7 @@ function Footer() {
             </p>
             <p>
               <FaEnvelope className="me-2" />
-              info@saranapackaging.co.id
+              salesmarketing.spa@gmail.com
             </p>
           </Col>
 

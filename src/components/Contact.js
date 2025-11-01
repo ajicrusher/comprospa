@@ -10,10 +10,10 @@ function Contact() {
     e.preventDefault();
 
     emailjs.sendForm(
-        "service_x48g2sg", // 👉 Ganti dengan Service ID kamu
-        "template_zmexfcg", // 👉 Ganti dengan Template ID kamu
+        "service_x48g2sg",  
+        "template_zmexfcg", 
         form.current,
-        "6_Xrxbt3CNCEFrtqS" // 👉 Ganti dengan Public Key kamu
+        "6_Xrxbt3CNCEFrtqS" 
       )
       .then(
         () => {
