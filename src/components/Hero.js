@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
-import { motion } from "framer-motion";
 import heroImage from "../assets/spa.jpg";
 
 function Hero() {
