@@ -1,10 +1,12 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
+import heroImage from "../assets/spa.jpg";
 
 function Hero() {
   return (
     <div className="hero-section " id="home">
+      <img src={heroImage} alt="Hero background" className="hero-bg" />
       <div className="overlay"></div>
       <Container className="hero-content">
         <h1 className="hero-title shadow-sm">Solusi Kemasan Berkualitas</h1>
